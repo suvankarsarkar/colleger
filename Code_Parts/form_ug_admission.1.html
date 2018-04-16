@@ -26,7 +26,7 @@
 	}
 	header{
 	text-align: center;
-	background: #f7bb87;
+	background: #f56639;
 	padding: 10px;
 	color:#fff;
 	}	
@@ -70,27 +70,6 @@
 	position: relative;
 	display: block;
 	margin: 50px 10px;
-	}
-	.header-block{
-	padding: 10px;
-	}
-	.img-block{
-	display: inline-block;
-	width: 30%;
-	margin: 0 auto;
-	text-align: center;
-	}
-	.text-block{
-	display: inline-block;
-	margin: 0 auto;
-	width: 60%;
-	}
-	.text-block h1{
-	color:#f56639;
-	}
-	.logo_img{
-	width:120px;
-	border-radius: 50%;
 	}
 	.title{
 	padding: 15px;
@@ -193,21 +172,6 @@
 		}
 		.file-label {
     	padding: 15px !important;
-		}
-		.header-block{
-		padding: 0;
-		padding: 5px;
-		}
-		.img-block{
-		display: block;				
-		}
-		.logo_img{
-		width: 80px;
-		}
-		.text-block{
-		display: block;
-		width: 100%;
-		text-align: center;
 		}
 	}
 /* ========= Input Styles =========*/
@@ -364,16 +328,23 @@
 
 <body>
 	<div class="container">
-		<div class="header-block">
-			<div class="img-block">
-				<img class="logo_img" src="c-logo.jpg">
-			</div>
-			<div class="text-block">
-				<h1>Banipur Mahila Mahavidyalaya</h1>
-				<p>Banipur , North Twenty Four Parganas, West Bengal, India</p>
-				<p>UGC Affiliated(Affiliated to West Bengal State University and Gov. of West Bengal)</p>				
-			</div>
-		</div>
+		<table>
+			<tr>
+				<td>
+					<img class="logo_img" src="c-logo.jpg">
+				</td>
+				<td>
+					<div class="form_header_txt">
+						<div class="logo_txt"> Banipur Mahila Mahavidyalaya </div>
+						<div class="small_txt_center"> Banipur , North Twenty Four Parganas, West Bengal, India </div>
+						<div class="small_txt_center"> UGC Affiliated </div>
+						<div class="small_txt_center"> ( Affiliated to West Bengal State University and Gov. of West Bengal ) </div>
+					</div>
+				</td>
+				<td>
+					<img class="logo_img" src="c-logo.jpg"> </td>
+			</tr>
+		</table>				
 	</div>
 	<header>
 		<div class="container">
@@ -400,35 +371,15 @@
 				<span>
 					<input class="slide-up" id="mother" type="text" name="MOTHER" placeholder="Your Mother's Name" />
 					<label for="mother">MOTHER'S NAME</label>
-				</span>					
+				</span>				
+				<span>
+					<input class="slide-up" id="husband" type="text" name="HUSBAND" placeholder="Your Husband's Name" />
+					<label for="husband">HUSBAND'S NAME</label>
+				</span>
 				<span>
 					<input class="slide-up" id="guardian" type="text" name="GUARDIAN" placeholder="Your Guardian's Name" />
 					<label for="guardian">GUARDIAN'S NAME</label>
 				</span>
-				<span>
-					<select id="gender" class="inpt_01" onchange="toggle_husband_visibility(id);" name="">
-						<option value="">SELECT</option>
-						<option value="FEMALE">FEMALE</option>
-						<option value="MALE">MALE</option>
-						<option value="OTHERS">OTHERS</option>
-					</select>
-					<label>GENDER</label>
-				</span>
-				<script>
-					function toggle_husband_visibility(id) {
-						var e = document.getElementById('gender');
-						if (e.value == "FEMALE") {
-							var hus_div = '<input class="slide-up" type="text" name="HUSBAND" placeholder="Your Husbands Name" /><label for="husband">HUSBANDS NAME</label>';
-						}
-						else {
-							var hus_div = '';
-						}
-						document.getElementById("husband").innerHTML = hus_div;
-					}						
-				</script>
-				<!-- Empty Husband Div -->
-				<span id="husband"></span>
-				<!-- /Empty Husband Div -->
 				<!-- Date Picker -->
 				<span>
 					<table>
@@ -525,7 +476,15 @@
 				<span>
 					<input class="slide-up" id="nationality" type="text" name="NATIONALITY" placeholder="Your Nationality" value="INDIAN" />
 					<label for="nationality">NATIONALITY</label>
-				</span>				
+				</span>
+				<span>
+					<select class="inpt_01" disabled>
+						<option value="FEMALE">FEMALE</option>
+						<option value="MALE">MALE</option>
+						<option value="OTHERS">OTHERS</option>
+					</select>
+					<label>GENDER</label>
+				</span>
 				<span>
 					<select class="inpt_01" name="RELIGION">
 						<option value="HINDU">HINDU</option>
@@ -623,7 +582,7 @@
 					<label for="hs_institute">NAME OF THE BOARD / COUNCIL</label>					
 				</span>
 				<span>
-					<input class="slide-up" id="hs_exam" type="text" name="HS_EXAMINATION" placeholder="NAME OF THE EXAMINATION e.g HIGHER SECONDARY"
+					<input class="slide-up" id="hs_exam" type="text" name="HS_EXAMINATION" placeholder="NAME OF THE EXAMINATION i.e HIGHER SECONDARY"
 					 required />
 					<label for="hs_exam">EXAMINATION NAME</label>
 				</span>
@@ -678,7 +637,15 @@
 						<option value="stream6">General B.A.</option>
 						<option value="stream8">General B.Sc.</option>
 					</select>
-					<label for="">APPLYING FOR</label>
+					<label for="">APPLYING FOR</label>					
+					<div class="toggle">
+						<p>History</p>
+						<label class="switch">
+							<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
+							<span class="slider round"></span>
+						</label>						
+					</div>
+					
 					<br>
 					<br>
 					<br>
@@ -691,93 +658,30 @@
 					<label>1. History or Sociology or Sanskrit</label>
 					<br>
 					<div id="choice1" onclick="hide_div('choice1');">						
-						<div class="toggle">
-							<br>							
-							<p>History</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sociology</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">History
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">Sociology
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">Sanskrit
 						<br>
 					</div>
 					<label>2. Education or Physical Education</label>
 					<br>
 					<div id="choice2" onclick="hide_div('choice2');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
+						<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">Education
+						<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>3. Philosophy or Political Science</label>
 					<br>
 					<div id="choice3" onclick="hide_div('choice3');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>						
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>												
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 					<label>4. Elec. Bengali or Elec. English</label>
 					<br>
 					<div id="choice4" onclick="hide_div('choice4');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 				</div>
@@ -790,72 +694,23 @@
 					<label>1. History or Sociology or Sanskrit</label>
 					<br>
 					<div id="choice19" onclick="hide_div('choice19');">
-						<div class="toggle">
-							<br>
-							<p>History</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sociology</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">History
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">Sociology
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">Sanskrit
 						<br>
 					</div>
 					<label>2. Education or Physical Education</label>
 					<br>
 					<div id="choice20" onclick="hide_div('choice20');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">Education
+						<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>3. Philosophy or Political Science</label>
 					<br>
 					<div id="choice21" onclick="hide_div('choice21');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 				</div>
@@ -868,72 +723,23 @@
 					<label>1. History or Sociology or Sanskrit</label>
 					<br>
 					<div id="choice5" onclick="hide_div('choice5');">
-						<div class="toggle">
-							<br>
-							<p>History</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sociology</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">History
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">Sociology
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">Sanskrit
 						<br>
 					</div>
 					<label>2. Elec. Bengali or Elec. English</label>
 					<br>
 					<div id="choice6" onclick="hide_div('choice6');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 					<label>3. Philosophy or Political Science</label>
 					<br>
 					<div id="choice7" onclick="hide_div('choice7');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 				</div>
@@ -946,93 +752,30 @@
 					<label>1. History or Sociology or Sanskrit</label>
 					<br>
 					<div id="choice8" onclick="hide_div('choice8');">
-						<div class="toggle">
-							<br>
-							<p>History</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sociology</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">History
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">Sociology
+						<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">Sanskrit
 						<br>
 					</div>
 					<label>2. Elec. Bengali or Elec. Sanskrit or Elec. English</label>
 					<br>
 					<div id="choice9" onclick="hide_div('choice9');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Sanskrit">Elec. Sanskrit
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 					<label>3. Education or Physical Education</label>
 					<br>
 					<div id="choice10" onclick="hide_div('choice10');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">Education
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>4. Philosophy</label>
 					<br>
 					<div id="choice11" onclick="hide_div('choice11');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
 						<br>
 					</div>
 				</div>
@@ -1045,64 +788,22 @@
 					<label>1. Elec. Bengali or Elec. English</label>
 					<br>
 					<div id="choice12" onclick="hide_div('choice12');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 					<label>2. Education or Physical Education</label>
 					<br>
 					<div id="choice13" onclick="hide_div('choice13');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">Education
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>3. Philosophy or Political Science</label>
 					<br>
 					<div id="choice14" onclick="hide_div('choice14');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 				</div>
@@ -1115,106 +816,36 @@
 					<label>1. Elec. Bengali or Elec. English</label>
 					<br>
 					<div id="choice15" onclick="hide_div('choice15');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 					<label>2. Sociology or History or Sanskrit</label>
 					<br>
 					<div id="choice16" onclick="hide_div('choice16');">
-						<div class="toggle">
-							<br>
-							<p>Sociology</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Sociology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>History</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="History">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Sanskrit</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Sanskrit">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Sociology">Sociology
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="History">History
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Sanskrit">Sanskrit
 						<br>
 					</div>
 					<label>3. Philosophy or Political Science</label>
 					<br>
 					<div id="choice17" onclick="hide_div('choice17');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 					<label>4. Education or Physical Education</label>
 					<br>
 					<div id="choice18" onclick="hide_div('choice18');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Education">Education
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>5. Geography </label>
 					<br>
 					<div id="choice23" onclick="hide_div('choice23');">
-						<div class="toggle">
-							<br>
-							<p>Geography</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Geography">
-								<span class="slider round"></span>
-							</label>
-						</div>
+						<input type="radio" name="option3" onclick="push_sub1(this.value);" value="Geography">Geography
 					</div>
 				</div>
 				<!-- For Stream 6 -->
@@ -1227,64 +858,22 @@
 					<label>1. Education or Physical Education</label>
 					<br>
 					<div id="choice19" onclick="hide_div('choice19');">
-						<div class="toggle">
-							<br>
-							<p>Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Physical Education</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">Education
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">Physical Education
 						<br>
 					</div>
 					<label>2. Philosophy or Political Science</label>
 					<br>
 					<div id="choice20" onclick="hide_div('choice20');">
-						<div class="toggle">
-							<br>
-							<p>Philosophy</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Political Science</p>
-							<label class="switch">
-								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">Philosophy
+						<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">Political Science
 						<br>
 					</div>
 					<label>3. Elec. Bengali or Elec. English</label>
 					<br>
 					<div id="choice21" onclick="hide_div('choice21');">
-						<div class="toggle">
-							<br>
-							<p>Elec. Bengali</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<div class="toggle">
-							<br>
-							<p>Elec. English</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">Elec. Bengali
+						<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">Elec. English
 						<br>
 					</div>
 				</div>
@@ -1297,40 +886,18 @@
 					<label>1. Zoology </label>
 					<br>
 					<div id="choice30" onclick="hide_div('choice30');">
-						<div class="toggle">
-							<br>
-							<p>Zoology</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Zoology">
-								<span class="slider round"></span>
-							</label>
-						</div>
-						<br>
+						<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Zoology">Zoology
 					</div>
 					<label>2. Botany </label>
 					<br>
 					<div id="choice31" onclick="hide_div('choice31');">
-						<div class="toggle">
-							<br>
-							<p>Botany</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Botany">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Botany">Botany
 						<br>
 					</div>
 					<label>3. Anthropology</label>
 					<br>
 					<div id="choice32" onclick="hide_div('choice32');">
-						<div class="toggle">
-							<br>
-							<p>Anthropology</p>
-							<label class="switch">
-								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Anthropology">
-								<span class="slider round"></span>
-							</label>
-						</div>						
+						<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Anthropology">Anthropology
 						<br>
 					</div>
 				</div>
@@ -1421,7 +988,7 @@
 			var e = document.getElementById(id);
 			if (e.style.display == 'block')
 				e.style.display = 'none';
-		}		
+		}
 		function push_sub(s) {
 
 			if ((document.getElementById('sub_1').value == 'Subject1')) {
@@ -1469,11 +1036,11 @@
 			document.getElementById(x).style.display = "block";
 			if (x == 'stream6' || x == 'stream8') {
 				document.getElementById("sub_3").style.display = "block";
-				var zz = '<fieldset id="dd" style="margin-top:5px;"><legend>Provide best of 5 Marks obtained on 10+2 or equivalent... </legend>				<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr>	 <tr> <td> Subject 1 		</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1"  name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2" name="HS_SUB_NO2"></td></tr> 			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>		';
+				var zz = '<fieldset id="dd"><legend>Provide best of 5 Marks obtained on 10+2 or equivalent... </legend>				<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr>	 <tr> <td> Subject 1 		</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1"  name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2" name="HS_SUB_NO2"></td></tr> 			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>		';
 				var EE = '';
 			} else {
 				var EE = '';
-				var zz = '<fieldset id="dd" style="margin-top:5px;"><legend>Provide best of 4+Applying Marks obtained on 10+2 or equivalent... </legend>		<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr> <tr> <td>  Applying Subject	</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1" name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2"  name="HS_SUB_NO2"></td></tr>			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>		';
+				var zz = '<fieldset id="dd"><legend>Provide best of 4+Applying Marks obtained on 10+2 or equivalent... </legend>		<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr> <tr> <td>  Applying Subject	</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1" name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2"  name="HS_SUB_NO2"></td></tr>			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>		';
 			}
 			EE = zz;
 			document.getElementById("mfrm").innerHTML = EE;
