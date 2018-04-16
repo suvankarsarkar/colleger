@@ -7,6 +7,7 @@
 <meta name="keywords" content="Online Admission 2016 17 Banipur Mahila Mahavidyalaya">
 <meta name="description" content=" BA Hons Gen admission ,Online Admission 2016 17 Banipur Mahila Mahavidyalaya ">
 <meta name="author" content="Suvankar Sarkar">
+<link rel="stylesheet" href="style.css">
 
 <title>Online Admission 2017 18 Banipur Mahila Mahavidyalaya </title>
 <style media="screen">
@@ -36,6 +37,52 @@
     padding-left: 15px;    
     margin-right: auto;
     margin-left: auto;                
+	}
+	.main{
+	display: table;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	}
+	.div-block{
+	display: table-cell;
+    vertical-align: middle;
+	width: 50%;
+	text-align: center;
+	}
+	.header-block{
+	padding: 10px;
+	display: table;
+	}
+	.img-block{
+	display: table-cell;
+    vertical-align: middle;
+	width: 30%;
+	text-align: center;
+	}
+	.text-block{
+	display: table-cell;
+    vertical-align: middle;
+	width: 60%;
+	}
+	.text-block h1{
+	color:#f56639;
+	}
+	.logo_img{
+	width:120px;
+	border-radius: 50%;
+	}
+	.title{
+	padding: 15px;
+	margin: 0;
+	background: #fff;
+	color:#f56639;
+	margin-bottom: 15px;
+	}
+	.label{
+	color:#fff;
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 5px;
 	}
 	/* ========= Input Styles =========*/
 	.row {
@@ -70,35 +117,7 @@
 	position: relative;
 	display: block;
 	margin: 50px 10px;
-	}
-	.header-block{
-	padding: 10px;
-	}
-	.img-block{
-	display: inline-block;
-	width: 30%;
-	margin: 0 auto;
-	text-align: center;
-	}
-	.text-block{
-	display: inline-block;
-	margin: 0 auto;
-	width: 60%;
-	}
-	.text-block h1{
-	color:#f56639;
-	}
-	.logo_img{
-	width:120px;
-	border-radius: 50%;
-	}
-	.title{
-	padding: 15px;
-	margin: 0;
-	background: #fff;
-	color:#f56639;
-	margin-bottom: 15px;
-	}
+	}	
 	.slide-up {
 	display: inline-block;
 	padding: 10px;
@@ -194,12 +213,16 @@
 		.file-label {
     	padding: 15px !important;
 		}
-		.header-block{
-		padding: 0;
+		.header-block{		
 		padding: 5px;
 		}
 		.img-block{
-		display: block;				
+		display: block;
+		width: 100%;
+		}
+		.div-block{
+		display: block;
+		width: 100%;
 		}
 		.logo_img{
 		width: 80px;
@@ -258,7 +281,6 @@
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
 	}
-
 	/* Rounded sliders */
 	.slider.round {
 	border-radius: 34px;
@@ -266,7 +288,7 @@
 	.slider.round:before {
 	border-radius: 50%;
 	}
-/* ========= Toggle Radio Button Styles =========*/
+	/* ========= Toggle Radio Button Styles =========*/
 	input,select{
 	font-size:18px;
 	padding:10px 10px 10px 5px;
@@ -278,84 +300,19 @@
   	input:focus{
 	outline:none;
 	}
-
-  /* LABEL ======================================= */
-  label 				 {
-  color:#fff;
-  font-size:15px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  /*top:10px;*/
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-  }
-
-  /* active state */
-  /*input:focus ~ label, input:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#5264AE;
-  }*/
-
-  /* BOTTOM BARS ================================= */
-  .bar 	{ position:relative; display:block; width:100%; }
-  .bar:before, .bar:after 	{
-  content:'';
-  height:2px;
-  width:0;
-  bottom:1px;
-  position:absolute;
-  background:#5264AE;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-  }
-  .bar:before {
-  left:50%;
-  }
-  .bar:after {
-  right:50%;
-  }
-
-  /* active state */
-  input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
-  }
-
-  /* HIGHLIGHTER ================================== */
-  highlight {
-  position:absolute;
-  height:60%;
-  width:100px;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-  }
-
-  /* active state */
-  input:focus ~ highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-  }
-
-  /* ANIMATIONS ================ */
-  @-webkit-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-  }
-  @-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-  }
-  @keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-  }
+	/* LABEL ======================================= */
+	label{
+	color:#fff;
+	font-size:15px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	/*top:10px;*/
+	transition:0.2s ease all;
+	-moz-transition:0.2s ease all;
+	-webkit-transition:0.2s ease all;
+	}
 </style>
 <!--
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -370,14 +327,14 @@
 			</div>
 			<div class="text-block">
 				<h1>Banipur Mahila Mahavidyalaya</h1>
-				<p>Banipur , North Twenty Four Parganas, West Bengal, India</p>
+				<p>Banipur , North 24 Parganas, West Bengal, India</p>
 				<p>UGC Affiliated(Affiliated to West Bengal State University and Gov. of West Bengal)</p>				
 			</div>
 		</div>
 	</div>
 	<header>
 		<div class="container">
-			<h1>ADMISSION FORM 2017-18</h1>
+			<h2>ADMISSION FORM 2017-18</h2>
 		</div>
 	</header>
 	
@@ -388,7 +345,7 @@
 		<!-- Personal information... -->
 		<div class="container">
 			<div class="row bg">
-				<h1 class="title">Personal Information</h1>				
+				<h2 class="title">Personal Information</h2>				
 				<span>
 					<input class="slide-up" id="name" type="text" required name="NAME" placeholder="Your Name" />
 					<label for="name">Name</label>
@@ -405,174 +362,192 @@
 					<input class="slide-up" id="guardian" type="text" name="GUARDIAN" placeholder="Your Guardian's Name" />
 					<label for="guardian">GUARDIAN'S NAME</label>
 				</span>
-				<span>
-					<select id="gender" class="inpt_01" onchange="toggle_husband_visibility(id);" name="">
-						<option value="">SELECT</option>
-						<option value="FEMALE">FEMALE</option>
-						<option value="MALE">MALE</option>
-						<option value="OTHERS">OTHERS</option>
-					</select>
-					<label>GENDER</label>
-				</span>
+				<div class="main">
+					<div class="div-block">
+						<span>
+							<p class="label">GENDER</p>
+							<select id="gender" class="soflow" onchange="toggle_husband_visibility(id);" name="">
+								<option value="">SELECT</option>
+								<option value="FEMALE">FEMALE</option>
+								<option value="MALE">MALE</option>
+								<option value="OTHERS">OTHERS</option>
+							</select>
+						</span>
+					</div>
+					<div class="div-block">
+						<!-- Date Picker -->
+						<span>
+							<p class="label">DATE OF BIRTH</p>
+							<table>
+								<tr>
+									<td>										
+										<select name="DOBD" style="width:100px;" class="soflow">
+											<option value="">DATE</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>
+									</td>
+									<td>										
+										<select name="DOBM" style="width:100px;" class="inpt_01 soflow">
+											<option value="">MONTH</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>										
+									</td>
+									<td>										
+										<select name="DOBY" style="width:100px;" class="inpt_01 soflow">
+											<option value="">YEAR</option>
+											<option value="2005">2005</option>
+											<option value="2004">2004</option>
+											<option value="2003">2003</option>
+											<option value="2002">2002</option>
+											<option value="2001">2001</option>
+											<option value="2000">2000</option>
+											<option value="1999">1999</option>
+											<option value="1998">1998</option>
+											<option value="1997">1997</option>
+											<option value="1996">1996</option>
+											<option value="1995">1995</option>
+											<option value="1994">1994</option>
+											<option value="1993">1993</option>
+											<option value="1992">1992</option>
+											<option value="1991">1991</option>
+											<option value="1990">1990</option>
+											<option value="1989">1989</option>
+											<option value="1988">1988</option>
+											<option value="1987">1987</option>
+											<option value="1986">1986</option>
+											<option value="1985">1985</option>
+											<option value="1984">1984</option>
+											<option value="1983">1983</option>
+											<option value="1982">1982</option>
+											<option value="1981">1981</option>
+											<option value="1980">1980</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</span>
+						<!-- /Date Picker -->
+					</div>
+				</div>				
 				<script>
 					function toggle_husband_visibility(id) {
 						var e = document.getElementById('gender');
 						if (e.value == "FEMALE") {
-							var hus_div = '<input class="slide-up" type="text" name="HUSBAND" placeholder="Your Husbands Name" /><label for="husband">HUSBANDS NAME</label>';
+							var hus_div = '<input class="slide-up" type="text" name="HUSBAND" placeholder="Your Husband\'s Name" /><label for="husband">HUSBAND\'S NAME</label>';
 						}
 						else {
 							var hus_div = '';
 						}
 						document.getElementById("husband").innerHTML = hus_div;
 					}						
-				</script>
+				</script>											
+				<div class="main">
+					<div class="div-block">
+						<span>
+							<p class="label">RELIGION</p>
+							<select class="soflow" name="RELIGION">
+								<option value="HINDU">HINDU</option>
+								<option value="MUSLIM">MUSLIM</option>
+								<option value="CHRISTIAN">CHRISTIAN</option>
+								<option value="JAIN">JAIN</option>
+								<option value="SIKH">SIKH</option>
+								<option value="BUDDHIST">BUDDHIST</option>
+								<option value="OTHERS">OTHERS</option>
+							</select>							
+						</span>
+					</div>												
+					<div class="div-block">
+						<span>
+							<p class="label">RESERVATION CATEGORY</p>
+							<select class="soflow" name="RESERVATION_CATEGORY" onchange="castc(this.value);" id="cst">
+								<option value="GENERAL">GENERAL</option>
+								<option value="SC">SC</option>
+								<option value="ST">ST</option>
+								<option value="OBC-A">OBC-A</option>
+								<option value="OBC-B">OBC-B</option>
+							</select>							
+						</span>
+					</div>
+				</div>
+				<div class="main">
+					<div class="div-block">
+						<span>
+							<p class="label">PHYSICAL DISABLITY</p>
+							<select class="soflow" name="PHYSICAL_DISABLITY">
+								<option value="NO">No</option>
+								<option value="PH_10">PH upto 10% Disablity</option>
+								<option value="PH_20">PH upto 20% Disablity</option>
+								<option value="PH_30">PH upto 30% Disablity</option>
+								<option value="PH_40">PH upto 40% Disablity</option>
+								<option value="PH_50">PH upto 50% Disablity</option>
+								<option value="PH_60">PH upto 60% Disablity</option>
+							</select>
+						</span>
+					</div>
+					<div class="div-block">
+						<span>
+							<p class="label">BLOOD GROUP</p>
+							<select class="soflow" name="BLOOD_GROUP">
+								<option value="N/A">N/A</option>
+								<option value="A+">A+</option>
+								<option value="A-">A-</option>
+								<option value="B+">B+</option>
+								<option value="B-">B-</option>
+								<option value="AB+">AB+</option>
+								<option value="AB-">AB-</option>
+								<option value="O+">O+</option>
+								<option value="O-">O-</option>
+							</select>
+						</span>
+					</div>
+				</div>
 				<!-- Empty Husband Div -->
 				<span id="husband"></span>
 				<!-- /Empty Husband Div -->
-				<!-- Date Picker -->
-				<span>
-					<table>
-						<tr>
-							<td>
-								<div> DATE </div>
-								<select name="DOBD" style="width:60px;" class="inpt_01">
-									<option value="01">01</option>
-									<option value="02">02</option>
-									<option value="03">03</option>
-									<option value="04">04</option>
-									<option value="05">05</option>
-									<option value="06">06</option>
-									<option value="07">07</option>
-									<option value="08">08</option>
-									<option value="09">09</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-									<option value="13">13</option>
-									<option value="14">14</option>
-									<option value="15">15</option>
-									<option value="16">16</option>
-									<option value="17">17</option>
-									<option value="18">18</option>
-									<option value="19">19</option>
-									<option value="20">20</option>
-									<option value="21">21</option>
-									<option value="22">22</option>
-									<option value="23">23</option>
-									<option value="24">24</option>
-									<option value="25">25</option>
-									<option value="26">26</option>
-									<option value="27">27</option>
-									<option value="28">28</option>
-									<option value="29">29</option>
-									<option value="30">30</option>
-									<option value="31">31</option>
-								</select>
-							</td>
-							<td>
-								<div> MONTH </div>
-								<select name="DOBM" style="width:60px;" class="inpt_01">
-									<option value="01">01</option>
-									<option value="02">02</option>
-									<option value="03">03</option>
-									<option value="04">04</option>
-									<option value="05">05</option>
-									<option value="06">06</option>
-									<option value="07">07</option>
-									<option value="08">08</option>
-									<option value="09">09</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-								</select>
-							</td>
-							<td>
-								<div> YEAR </div>
-								<select name="DOBY" style="width:100px;" class="inpt_01">
-									<option value="2005">2005</option>
-									<option value="2004">2004</option>
-									<option value="2003">2003</option>
-									<option value="2002">2002</option>
-									<option value="2001">2001</option>
-									<option value="2000">2000</option>
-									<option value="1999">1999</option>
-									<option value="1998">1998</option>
-									<option value="1997">1997</option>
-									<option value="1996">1996</option>
-									<option value="1995">1995</option>
-									<option value="1994">1994</option>
-									<option value="1993">1993</option>
-									<option value="1992">1992</option>
-									<option value="1991">1991</option>
-									<option value="1990">1990</option>
-									<option value="1989">1989</option>
-									<option value="1988">1988</option>
-									<option value="1987">1987</option>
-									<option value="1986">1986</option>
-									<option value="1985">1985</option>
-									<option value="1984">1984</option>
-									<option value="1983">1983</option>
-									<option value="1982">1982</option>
-									<option value="1981">1981</option>
-									<option value="1980">1980</option>
-								</select>
-							</td>
-						</tr>
-					</table>
-					<label for="">DATE OF BIRTH</label>										
-				</span>
-				<!-- /Date Picker -->
 				<span>
 					<input class="slide-up" id="nationality" type="text" name="NATIONALITY" placeholder="Your Nationality" value="INDIAN" />
 					<label for="nationality">NATIONALITY</label>
-				</span>				
-				<span>
-					<select class="inpt_01" name="RELIGION">
-						<option value="HINDU">HINDU</option>
-						<option value="MUSLIM">MUSLIM</option>
-						<option value="CHRISTIAN">CHRISTIAN</option>
-						<option value="JAIN">JAIN</option>
-						<option value="SIKH">SIKH</option>
-						<option value="BUDDHIST">BUDDHIST</option>
-						<option value="OTHERS">OTHERS</option>
-					</select>
-					<label>RELIGION</label>
-				</span>
-				<span>
-					<select class="inpt_01" name="RESERVATION_CATEGORY" onchange="castc(this.value);" id="cst">
-						<option value="GENERAL">GENERAL</option>
-						<option value="SC">SC</option>
-						<option value="ST">ST</option>
-						<option value="OBC-A">OBC-A</option>
-						<option value="OBC-B">OBC-B</option>
-					</select>
-					<label>RESERVATION CATEGORY</label>
-				</span>
-				<span>
-					<select class="inpt_01" name="PHYSICAL_DISABLITY">
-						<option value="NO">No</option>
-						<option value="PH_10">PH upto 10% Disablity</option>
-						<option value="PH_20">PH upto 20% Disablity</option>
-						<option value="PH_30">PH upto 30% Disablity</option>
-						<option value="PH_40">PH upto 40% Disablity</option>
-						<option value="PH_50">PH upto 50% Disablity</option>
-						<option value="PH_60">PH upto 60% Disablity</option>
-					</select>
-					<label>PHYSICAL DISABLITY</label>
-				</span>
-				<span>
-					<select class="inpt_01" name="BLOOD_GROUP">
-						<option value="N/A">N/A</option>
-						<option value="A+">A+</option>
-						<option value="A-">A-</option>
-						<option value="B+">B+</option>
-						<option value="B-">B-</option>
-						<option value="AB+">AB+</option>
-						<option value="AB-">AB-</option>
-						<option value="O+">O+</option>
-						<option value="O-">O-</option>
-					</select>
-					<label>BLOOD GROUP</label>
 				</span>
 				<span>
 					<input class="slide-up" id="address" type="text" name="ADDRESS" placeholder="Your Permanent Address" required />
@@ -601,7 +576,7 @@
 		<!-- Educational information... -->
 		<div class="container">
 			<div class="row bg-alt">
-				<h1 class="title">Educational Information</h1>
+				<h2 class="title">Educational Information</h2>
 				<input type="hidden" id="tt1" name="ssub_1">
 				<input type="hidden" id="tt2" name="ssub_2">
 				<input type="hidden" id="tt3" name="ssub_3">
@@ -610,18 +585,33 @@
 					<input class="slide-up" id="hs_institute" type="text" name="HS_INSTITUTION" placeholder="NAME OF THE INSTITUTION FOR 10+2" required />
 					<label for="hs_institute">INSTITUTE's NAME</label>					
 				</span>
-				<span>
-					<select name="HSBOARD" class="inpt_01">
-						<option value="WBCHSE">WBCHSE</option>
-						<option value="Rabindra-Open">Rabindra Open</option>
-						<option value="Vocational">Vocational</option>
-						<option value="ISC">ISC</option>
-						<option value="CBSE">CBSE</option>
-						<option value="NIOS">NIOS</option>
-						<option value="OTHERS">OTHERS</option>
-					</select>
-					<label for="hs_institute">NAME OF THE BOARD / COUNCIL</label>					
-				</span>
+				<div class="main">
+					<div class="div-block">
+						<span>
+							<p class="label">NAME OF THE BOARD / COUNCIL</p>
+							<select name="HSBOARD" class="soflow">
+								<option value="WBCHSE">WBCHSE</option>
+								<option value="Rabindra-Open">Rabindra Open</option>
+								<option value="Vocational">Vocational</option>
+								<option value="ISC">ISC</option>
+								<option value="CBSE">CBSE</option>
+								<option value="NIOS">NIOS</option>
+								<option value="OTHERS">OTHERS</option>
+							</select>							
+						</span>
+					</div>
+					<div class="div-block">
+						<span>
+							<p class="label">PASSING YEAR</p>
+							<select name="HS_YEAR" class="soflow">
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+							</select>
+						</span>
+					</div>
+				</div>				
 				<span>
 					<input class="slide-up" id="hs_exam" type="text" name="HS_EXAMINATION" placeholder="NAME OF THE EXAMINATION e.g HIGHER SECONDARY"
 					 required />
@@ -634,16 +624,7 @@
 				<span>												
 					<input class="slide-up" id="no" type="text" name="HS_NO" placeholder="ENTER No.">
 					<label for="roll">NO</label>						
-				</span>
-				<span>
-					<select name="HS_YEAR" class="F">
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-					</select>
-					<label for="">PASSING YEAR</label>
-				</span>
+				</span>				
 				<span>
 					<input class="slide-up" id="reg_no" type="text" name="HS_REGISTRATION_NUMBER" placeholder="ENTER Registration No." required>
 					<label for="reg_no">HS REGISTRATION NUMBER</label>
@@ -663,11 +644,12 @@
 		<!-- Applying Subject information... -->
 		<div class="container">
 			<div class="row bg">
-				<h1 class="title">Applying Subjects and Information</h1>
+				<h2 class="title">Applying Subjects and Information</h2>
 				<p>N.B. Education / Sociology : Psychology, Philosophy, Mathematics, Sociology, Education, Economics, Political Science, History
 				be treated as related subject.</p>
 				<span>
-					<select name="GENORHONS" class="inpt_01" onchange="choose_stream(this.value);" name="">
+					<p class="label">APPLYING FOR</p>
+					<select name="GENORHONS" class="soflow" onchange="choose_stream(this.value);" name="" style="width:100%;">
 						<option value="">SELECT HONOURS</option>
 						<option value="stream1">Bengali</option>
 						<option value="stream2">English</option>
@@ -677,8 +659,7 @@
 						<option value="stream7">History</option>
 						<option value="stream6">General B.A.</option>
 						<option value="stream8">General B.Sc.</option>
-					</select>
-					<label for="">APPLYING FOR</label>
+					</select>					
 					<br>
 					<br>
 					<br>
@@ -693,7 +674,7 @@
 					<div id="choice1" onclick="hide_div('choice1');">						
 						<div class="toggle">
 							<br>							
-							<p>History</p>
+							<p>History</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
 								<span class="slider round"></span>
@@ -701,7 +682,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sociology</p>
+							<p>Sociology</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
 								<span class="slider round"></span>
@@ -709,7 +690,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sanskrit</p>
+							<p>Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
 								<span class="slider round"></span>
@@ -722,7 +703,7 @@
 					<div id="choice2" onclick="hide_div('choice2');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -730,7 +711,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -743,7 +724,7 @@
 					<div id="choice3" onclick="hide_div('choice3');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -751,7 +732,7 @@
 						</div>						
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -764,7 +745,7 @@
 					<div id="choice4" onclick="hide_div('choice4');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -772,7 +753,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -792,7 +773,7 @@
 					<div id="choice19" onclick="hide_div('choice19');">
 						<div class="toggle">
 							<br>
-							<p>History</p>
+							<p>History</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
 								<span class="slider round"></span>
@@ -800,7 +781,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sociology</p>
+							<p>Sociology</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
 								<span class="slider round"></span>
@@ -808,7 +789,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sanskrit</p>
+							<p>Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
 								<span class="slider round"></span>
@@ -821,7 +802,7 @@
 					<div id="choice20" onclick="hide_div('choice20');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -829,7 +810,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option2" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -842,7 +823,7 @@
 					<div id="choice21" onclick="hide_div('choice21');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -850,7 +831,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -870,7 +851,7 @@
 					<div id="choice5" onclick="hide_div('choice5');">
 						<div class="toggle">
 							<br>
-							<p>History</p>
+							<p>History</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
 								<span class="slider round"></span>
@@ -878,7 +859,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sociology</p>
+							<p>Sociology</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
 								<span class="slider round"></span>
@@ -886,7 +867,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sanskrit</p>
+							<p>Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
 								<span class="slider round"></span>
@@ -899,7 +880,7 @@
 					<div id="choice6" onclick="hide_div('choice6');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -907,7 +888,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -920,7 +901,7 @@
 					<div id="choice7" onclick="hide_div('choice7');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -928,7 +909,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -948,7 +929,7 @@
 					<div id="choice8" onclick="hide_div('choice8');">
 						<div class="toggle">
 							<br>
-							<p>History</p>
+							<p>History</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="History">
 								<span class="slider round"></span>
@@ -956,7 +937,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sociology</p>
+							<p>Sociology</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sociology">
 								<span class="slider round"></span>
@@ -964,7 +945,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sanskrit</p>
+							<p>Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option1" onclick="push_sub(this.value);" value="Sanskrit">
 								<span class="slider round"></span>
@@ -977,7 +958,7 @@
 					<div id="choice9" onclick="hide_div('choice9');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -985,7 +966,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. Sanskrit</p>
+							<p>Elec. Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Sanskrit">
 								<span class="slider round"></span>
@@ -993,7 +974,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -1006,7 +987,7 @@
 					<div id="choice10" onclick="hide_div('choice10');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -1014,7 +995,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -1027,7 +1008,7 @@
 					<div id="choice11" onclick="hide_div('choice11');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -1047,7 +1028,7 @@
 					<div id="choice12" onclick="hide_div('choice12');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -1055,7 +1036,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -1068,7 +1049,7 @@
 					<div id="choice13" onclick="hide_div('choice13');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -1076,7 +1057,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -1089,7 +1070,7 @@
 					<div id="choice14" onclick="hide_div('choice14');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -1097,7 +1078,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -1117,7 +1098,7 @@
 					<div id="choice15" onclick="hide_div('choice15');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -1125,7 +1106,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -1138,7 +1119,7 @@
 					<div id="choice16" onclick="hide_div('choice16');">
 						<div class="toggle">
 							<br>
-							<p>Sociology</p>
+							<p>Sociology</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Sociology">
 								<span class="slider round"></span>
@@ -1146,7 +1127,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>History</p>
+							<p>History</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="History">
 								<span class="slider round"></span>
@@ -1154,7 +1135,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Sanskrit</p>
+							<p>Sanskrit</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Sanskrit">
 								<span class="slider round"></span>
@@ -1167,7 +1148,7 @@
 					<div id="choice17" onclick="hide_div('choice17');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -1175,7 +1156,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -1188,7 +1169,7 @@
 					<div id="choice18" onclick="hide_div('choice18');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -1196,7 +1177,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -1209,12 +1190,13 @@
 					<div id="choice23" onclick="hide_div('choice23');">
 						<div class="toggle">
 							<br>
-							<p>Geography</p>
+							<p>Geography</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Geography">
 								<span class="slider round"></span>
 							</label>
 						</div>
+						<br>
 					</div>
 				</div>
 				<!-- For Stream 6 -->
@@ -1229,7 +1211,7 @@
 					<div id="choice19" onclick="hide_div('choice19');">
 						<div class="toggle">
 							<br>
-							<p>Education</p>
+							<p>Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Education">
 								<span class="slider round"></span>
@@ -1237,7 +1219,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Physical Education</p>
+							<p>Physical Education</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Physical Education">
 								<span class="slider round"></span>
@@ -1250,7 +1232,7 @@
 					<div id="choice20" onclick="hide_div('choice20');">
 						<div class="toggle">
 							<br>
-							<p>Philosophy</p>
+							<p>Philosophy</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Philosophy">
 								<span class="slider round"></span>
@@ -1258,7 +1240,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Political Science</p>
+							<p>Political Science</p><br>
 							<label class="switch">
 								<input type="radio" name="option3" onclick="push_sub(this.value);" value="Political Science">
 								<span class="slider round"></span>
@@ -1271,7 +1253,7 @@
 					<div id="choice21" onclick="hide_div('choice21');">
 						<div class="toggle">
 							<br>
-							<p>Elec. Bengali</p>
+							<p>Elec. Bengali</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. Bengali">
 								<span class="slider round"></span>
@@ -1279,7 +1261,7 @@
 						</div>
 						<div class="toggle">
 							<br>
-							<p>Elec. English</p>
+							<p>Elec. English</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub(this.value);" value="Elec. English">
 								<span class="slider round"></span>
@@ -1299,7 +1281,7 @@
 					<div id="choice30" onclick="hide_div('choice30');">
 						<div class="toggle">
 							<br>
-							<p>Zoology</p>
+							<p>Zoology</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Zoology">
 								<span class="slider round"></span>
@@ -1312,7 +1294,7 @@
 					<div id="choice31" onclick="hide_div('choice31');">
 						<div class="toggle">
 							<br>
-							<p>Botany</p>
+							<p>Botany</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Botany">
 								<span class="slider round"></span>
@@ -1325,7 +1307,7 @@
 					<div id="choice32" onclick="hide_div('choice32');">
 						<div class="toggle">
 							<br>
-							<p>Anthropology</p>
+							<p>Anthropology</p><br>
 							<label class="switch">
 								<input type="radio" name="option4" onclick="push_sub1(this.value);" value="Anthropology">
 								<span class="slider round"></span>
@@ -1348,7 +1330,7 @@
 		<!-- File Upload... -->
 		<div class="container">
 			<div class="row bg-alt">
-				<h1 class="title">File Upload</h1>
+				<h2 class="title">File Upload</h2>
 				<p>SCANNED DOCUMENTS SHOULD BE IN GREYSCALE/Black&White (149KB MAX LIMIT FOR EACH FILE).</p>
 				<span>
 					<input class="slide-up" type="file" name="Photo" >
@@ -1387,9 +1369,9 @@
 					<br> e) Original School Leaving Certificate
 					<br>
 				</div>
-				<input class="sbmt" type="submit">
+				<input class="butt" type="submit">
 			</div>
-		</div>	
+		</div>
 	</form>	
 </body>
 	<script>
@@ -1473,13 +1455,13 @@
 				var EE = '';
 			} else {
 				var EE = '';
-				var zz = '<fieldset id="dd" style="margin-top:5px;"><legend>Provide best of 4+Applying Marks obtained on 10+2 or equivalent... </legend>		<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr> <tr> <td>  Applying Subject	</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1" name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2"  name="HS_SUB_NO2"></td></tr>			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>		';
+				var zz = '<fieldset id="dd" style="margin-top:5px;"><legend>Provide best of 4+Applying Marks obtained on 10+2 or equivalent... </legend>		<table><tr> <td> ... </td><td> Subject Name </td><td width="50" >Marks</td> </tr> <tr> <td>  Applying Subject	</td><td> <input type="text" name="HS_SUB_NM1" > </td><td> <input type="text" id="hsss1" name="HS_SUB_NO1"> </td></tr>			<tr><td> Subject 2 </td><td> <input type="text" name="HS_SUB_NM2" > </td><td> <input type="text" id="hsss2"  name="HS_SUB_NO2"></td></tr>			<tr><td> Subject 3 </td><td> <input type="text" name="HS_SUB_NM3" > </td><td> <input type="text" id="hsss3"  name="HS_SUB_NO3">	</td></tr>		<tr><td> Subject 4 </td><td> <input type="text" name="HS_SUB_NM4" > </td><td> <input type="text" id="hsss4"  name="HS_SUB_NO4"> </td></tr>			<tr><td> Subject 5 </td><td> <input type="text" name="HS_SUB_NM5" > </td><td> <input type="text" required  id="hsss5"  onchange="hsaggr();" name="HS_SUB_NO5">	</td></tr>			<tr><td> Aggregate </td><td> ... </td><td> <input type="text" name="HS_SUB_AGG" id="aggmo" disabled> </td></tr>	</table>	</fieldset>';
 			}
 			EE = zz;
 			document.getElementById("mfrm").innerHTML = EE;
 		}
 
 		function castc(ca) { if (document.getElementById("cst").value != "GENERAL") { document.getElementById("ccerti").required = true; } else { document.getElementById("ccerti").required = false; } }
-		function hsaggr(agg) { var aggr = Number(document.getElementById("hsss1").value) + Number(document.getElementById("hsss2").value) + Number(document.getElementById("hsss3").value) + Number(document.getElementById("hsss4").value) + Number(document.getElementById("hsss5").value); document.getElementById("aggmo").value = aggr; }
+		function hsaggr(agg) { var aggr = Number(document.getElementById("hsss1").value) + Number(document.getElementById("hsss2").value) + Number(document.getElementById("hsss3").value) + Number(document.getElementById("hsss4").value) + Number(document.getElementById("hsss5").value); document.getElementById("aggmo").value = aggr; }		
 	</script>
 </html>
